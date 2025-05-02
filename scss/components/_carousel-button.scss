@@ -1,0 +1,58 @@
+.carousel-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-dark);
+    fill: var(--color-primary-dark);
+    cursor: pointer;
+    transition: background-color 0.3s, fill 0.3s;
+
+
+    &:hover {
+        background-color: var(--color-primary-dark);
+        fill: var(--color-primary-light);
+    }
+
+    &.next {
+        transform: rotate(180deg);
+    }
+
+    &.animate {
+        animation: button-bounce 0.5s;
+    }
+    
+    @keyframes button-bounce {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+        50% {
+            transform: translateX(-20px) scale(0.8);
+        }
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+    
+    &.next.animate {
+        animation: button-bounce-next 0.5s;
+    }
+    
+    @keyframes button-bounce-next { /*Оставил так потому что кнопка в право при анимации отменяет  rotate(180deg) есди оставить одну аним*/
+        0% {
+            transform: rotate(180deg) translateX(0) scale(1);
+        }
+        50% {
+            transform: rotate(180deg) translateX(-20px) scale(0.8);
+        }
+        100% {
+            transform: rotate(180deg) translateX(0) scale(1);
+        }
+    }
+}
+

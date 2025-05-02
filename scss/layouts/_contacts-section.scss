@@ -1,0 +1,54 @@
+.contacts-section{
+    padding-bottom: 0;
+
+    @media screen and (min-width: $bp-tablet){
+        padding-bottom: 96px;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media screen and (min-width: $bp-tablet){
+            flex-direction: row;
+            gap: 32px;
+        }
+    }
+
+    &__form-filed{
+        margin-bottom: 16px;
+
+        @media screen and (min-width: $bp-tablet){
+            margin-bottom: 24px;
+        }
+    }
+
+    &__button{
+        display: block;
+        margin: 0 auto 16px; /*16px - это нижний марджин*/
+    }
+
+    &__map{
+        flex-shrink: 0;
+        margin: auto -24px;
+        height: 176px;
+        border: none;
+        border-radius: 16px;
+
+        @media screen and (min-width: $bp-tablet){
+            width: 320px;
+            height: 500px;
+        }
+
+        @media screen and (min-width: $bp-desktop){
+            margin: auto;
+            width: 600px;
+            height: 595px;
+        }
+    }
+    
+    &__title{
+        margin-bottom: 16px;
+    }
+}

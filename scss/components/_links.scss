@@ -1,0 +1,11 @@
+.link{
+    font-size: 14px;
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.link:hover{
+    color: var(--color-brand);
+   transform: scale(1.05);
+}
